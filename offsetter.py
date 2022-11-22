@@ -1,14 +1,8 @@
 #!/usr/bin/python3
-#Python 3 BOF Fuzzer for terminal
+#Python 3 BOF EIP Offset Finder for terminal
 #Credits:
 #Olivier Laflamme - https://boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/
 #Heath Adams (The Cyber Mentor)'s PNPT Training - https://github.com/hmaverickadams
-
-#Usage: python3 fuzzer.py -i <IP> -p <PORT> --prefix <Optional> -b <
-#-i: IP Address
-#-p: Port
-#--prefix: String to add to message
-#-b: Crashed bytes as reported by fuzzer. Add some padding.
 
 #May need to replace msf-pattern_create with complete path
 #Target appears to crash in the middle of sending the payload, throwing a socket.OSError exception. Same exception which is thrown when no connection is established.
