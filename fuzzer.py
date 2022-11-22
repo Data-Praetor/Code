@@ -13,7 +13,7 @@ args = argparse.ArgumentParser(usage='%(prog)s -i <IP> -p <PORT> --prefix <Optio
 args.add_argument("-i", "--ip", required=True, help="IP Address")
 args.add_argument("-p", "--port", type=int, required=True, help="Port")
 args.add_argument("--prefix", help="String prefixed to the payload")
-args.add_argument("-b", "--bytes", type=int, help="Exact bytes to crash the target. Use to consistently replicate the crash") 
+args.add_argument("-b", "--bytes", type=int, help="Exact bytes to crash the target. Use to consistently replicate the crash.") 
 args = vars(args.parse_args())
 
 ip = args["ip"]
