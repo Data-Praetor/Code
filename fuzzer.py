@@ -26,8 +26,8 @@ except:
 
 prefix = args["prefix"]
 
-if (args["b"]):
-	payload = prefix + "A" * args["b"]
+if (args["bytes"]):
+	payload = prefix + "A" * args["bytes"]
 else:
 	payload = prefix + "A" * 100
 
