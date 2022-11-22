@@ -28,8 +28,7 @@ try:
 	socket.inet_aton(ip)
 	host = (ip,port)
 except:
-	print("Invalid IP Address.")
-	sys.exit()
+	sys.exit("Invalid IP Address.")
 
 prefix = str(args["prefix"])
 
@@ -55,6 +54,6 @@ while True:
 	except:
 		if iterated:
 			print("Crash occured at buffer length: " + str(len(payload) - 100))
+			sys.exit()
 		else:
-			print("Couldn't connect to target.")
-		sys.exit()
+			sys.exit("Couldn't connect to the target.")
