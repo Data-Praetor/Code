@@ -24,7 +24,12 @@ args = vars(args.parse_args())
 
 ip = str(args["i"])
 port= int(args["p"])
-host = (ip,port)
+try:
+	socket.inet_aton(ip)
+	host = (ip,port)
+except:
+	print("Invalid IP Address.")
+	sys.exit()
 
 prefix = str(args["prefix"])
 
