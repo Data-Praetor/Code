@@ -10,7 +10,7 @@
 #--prefix: String to add to message
 #-b: If the buffer length for crash is known, use this to replicate crashing consistently
 
-#Expected: The vulnerable program sends some data on connection. Otherwise, remove line #41: "s.recv(1024)"
+#Expected: The vulnerable program sends some data on connection. Otherwise, remove line #47: "s.recv(1024)"
 
 import argparse, sys, socket
 from time import sleep
