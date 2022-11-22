@@ -5,7 +5,7 @@
 #Heath Adams (The Cyber Mentor)'s PNPT Training - https://github.com/hmaverickadams
 
 #Usage: python3 fuzzer.py -i <IP> -p <PORT> --prefix <Optional>
-#Expected: The vulnerable program sends some data after connection. Otherwise, remove line #32: "s.recv(1024"
+#Expected: The vulnerable program sends some data after connection. Otherwise, remove line #32: "s.recv(1024)"
 
 import argparse, sys, socket
 from time import sleep
