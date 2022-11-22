@@ -25,9 +25,9 @@ except:
 	sys.exit("Invalid IP Address.")
 
 if args["prefix"]:
-	prefix = args["prefix"].encode()
+	prefix = args["prefix"]
 else:
-	prefix = b''
+	prefix = ""
 
 if (args["bytes"]):
 	payload = prefix + "A" * args["bytes"]
