@@ -5,8 +5,6 @@
 #Heath Adams (The Cyber Mentor)'s PNPT Training - https://github.com/hmaverickadams
 #User dekker#6621 for encode('raw_unicode_escape') idea
 
-#May need to replace msf-pattern_create with complete path
-
 import argparse, socket, subprocess, sys
 
 args = argparse.ArgumentParser(usage='%(prog)s -i <IP> -p <PORT> --prefix <Optional> -b <Optional>')
