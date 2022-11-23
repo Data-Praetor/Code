@@ -7,7 +7,7 @@
 
 import argparse, socket, sys
 
-args = argparse.ArgumentParser(usage='%(prog)s -i <IP> -p <PORT> --prefix <Optional> -b <Optional>')
+args = argparse.ArgumentParser(usage='%(prog)s -i <IP> -p <PORT> -o <Offset Bytes> --prefix <Optional>')
 args.add_argument("-i", "--ip", required=True, help="IP Address")
 args.add_argument("-p", "--port", type=int, required=True, help="Port")
 args.add_argument("--prefix", help="String prefixed to the payload")
