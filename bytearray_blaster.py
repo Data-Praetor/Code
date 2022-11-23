@@ -5,7 +5,7 @@
 #Heath Adams (The Cyber Mentor)'s PNPT Training - https://github.com/hmaverickadams
 #User dekker#6621 for encode('raw_unicode_escape') idea
 
-import argparse, socket, subprocess, sys
+import argparse, socket, sys
 
 args = argparse.ArgumentParser(usage='%(prog)s -i <IP> -p <PORT> --prefix <Optional> -b <Optional>')
 args.add_argument("-i", "--ip", required=True, help="IP Address")
